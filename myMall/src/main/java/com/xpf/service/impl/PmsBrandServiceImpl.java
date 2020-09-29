@@ -12,38 +12,39 @@ import java.util.List;
 
 @Service
 public class PmsBrandServiceImpl implements PmsBrandService {
+
     @Autowired
-    private PmsBrandMapper brandMapper;
+    private PmsBrandMapper PmsBrandMapper;
 
     @Override
     public List<PmsBrand> listAllBrand() {
-        return brandMapper.selectByExample(new PmsBrandExample());
+        return PmsBrandMapper.selectByExample(new PmsBrandExample());
     }
 
     @Override
     public int createBrand(PmsBrand brand) {
-        return brandMapper.insertSelective(brand);
+        return PmsBrandMapper.insertSelective(brand);
     }
 
     @Override
     public int updateBrand(Long id, PmsBrand brand) {
         brand.setId(id);
-        return brandMapper.updateByPrimaryKeySelective(brand);
+        return PmsBrandMapper.updateByPrimaryKeySelective(brand);
     }
 
     @Override
     public int deleteBrand(Long id) {
-        return brandMapper.deleteByPrimaryKey(id);
+        return PmsBrandMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public List<PmsBrand> listBrand(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        return brandMapper.selectByExample(new PmsBrandExample());
+        return PmsBrandMapper.selectByExample(new PmsBrandExample());
     }
 
     @Override
     public PmsBrand getBrand(Long id) {
-        return brandMapper.selectByPrimaryKey(id);
+        return PmsBrandMapper.selectByPrimaryKey(id);
     }
 }
