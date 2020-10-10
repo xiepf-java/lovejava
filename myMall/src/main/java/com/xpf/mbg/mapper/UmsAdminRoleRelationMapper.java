@@ -4,7 +4,9 @@ import com.xpf.mbg.model.UmsAdminRoleRelation;
 import com.xpf.mbg.model.UmsAdminRoleRelationExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UmsAdminRoleRelationMapper {
     long countByExample(UmsAdminRoleRelationExample example);
 

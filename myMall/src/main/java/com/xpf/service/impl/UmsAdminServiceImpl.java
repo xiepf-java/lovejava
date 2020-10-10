@@ -2,7 +2,6 @@ package com.xpf.service.impl;
 
 import com.xpf.common.utils.JwtTokenUtil;
 import com.xpf.dao.UmsAdminRoleRelationDao;
-import com.xpf.dto.UmsAdminLoginParam;
 import com.xpf.mbg.mapper.UmsAdminMapper;
 import com.xpf.mbg.model.UmsAdmin;
 import com.xpf.mbg.model.UmsAdminExample;
@@ -13,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;

@@ -4,7 +4,9 @@ import com.xpf.mbg.model.UmsPermission;
 import com.xpf.mbg.model.UmsPermissionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UmsPermissionMapper {
     long countByExample(UmsPermissionExample example);
 
